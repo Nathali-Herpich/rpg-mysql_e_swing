@@ -47,7 +47,7 @@ public class TelaPrincipalRPG {
 
         salvar.addActionListener(e -> {
             try (Connection conexao = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/projetorpg", "root", "Nathali2203")) {
+                    "jdbc:mysql://localhost:3306/projetorpg", "root", "")) {
                 String sql = "INSERT INTO personagem (nome, idade, arma, descricao) VALUES (?, ?, ?, ?)";
                 PreparedStatement stmt = conexao.prepareStatement(sql);
                 stmt.setString(1, nome.getText());
@@ -85,7 +85,7 @@ public class TelaPrincipalRPG {
 
         salvar.addActionListener(e -> {
             try (Connection conexao = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/projetorpg", "root", "Nathali2203")) {
+                    "jdbc:mysql://localhost:3306/projetorpg", "root", "")) {
                 String sql = "INSERT INTO inimigos (raca, poder, caracteristica) VALUES (?, ?, ?)";
                 PreparedStatement stmt = conexao.prepareStatement(sql);
                 stmt.setString(1, raca.getText());
