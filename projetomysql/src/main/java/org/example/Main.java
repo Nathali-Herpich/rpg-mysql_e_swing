@@ -56,7 +56,7 @@ public class Main {
         form.add(salvar);
 
         salvar.addActionListener(e -> {
-            try (Connection conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/livros", "root", "Nathali2203")) {
+            try (Connection conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/livros", "root", "xxxxxxxxx")) {
                 String sql = "INSERT INTO livros (titulo, autor, ano, genero) VALUES (?, ?, ?, ?)";
                 PreparedStatement stmt = conexao.prepareStatement(sql);
                 stmt.setString(1, autor.getText());
@@ -88,7 +88,7 @@ public class Main {
         form.add(scrollPane, BorderLayout.CENTER);
 
         try (Connection conexao = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/livros", "root", "Nathali2203")) {
+                "jdbc:mysql://localhost:3306/livros", "root", "xxxxxxxxx")) {
 
             String sql = "SELECT titulo, autor, ano, genero FROM livros";
             PreparedStatement stmt = conexao.prepareStatement(sql);
